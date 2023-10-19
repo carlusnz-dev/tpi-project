@@ -4,8 +4,18 @@
     box-sizing: border-box;
 }
 
+body {
+    min-width: 372px;
+}
+
+:root {
+    --primary-color: #314ed1;
+    --secondary-color: #6b6b6b;
+    --light-color: #f4f4f4;
+    --dark-color: #111111;
+}
+
 header {
-    background-color: #fff;
     padding: 20px 0;
 }
 
@@ -31,13 +41,13 @@ main {
 .navbar-brand span {
     font-weight: bold;
     font-size: 1.5rem;
-    color: #000000;
+    color: var(--dark-color);
     margin-left: 1rem;
     transition: all 0.3s ease;
 }
 
 .navbar-brand:hover span {
-    color: #6b6b6b;
+    color: var(--primary-color);
 }
 
 .navbar-brand img {
@@ -46,7 +56,7 @@ main {
 }
 
 .nav-link {
-    color: #555555;
+    color: var(--secondary-color);
     font-weight: 500;
     font-size: 1.1rem;
     margin-left: 1rem;
@@ -58,12 +68,12 @@ main {
     display: block;
     width: 0;
     height: 2px;
-    background-color: #000000;
+    background-color: var(--dark-color);
     transition: width 0.3s;
 }
 
 .nav-link:hover {
-    color: #000000;
+    color: var(--dark-color);
 }
 
 .nav-link:hover::after {
@@ -71,7 +81,7 @@ main {
 }
 
 .nav-link.active {
-    color: #000000;
+    color: var(--dark-color);
 }
 
 .nav-link.active::after {
@@ -102,9 +112,8 @@ main {
 /* main title */
 
 main .cover {
-    background-image: url('../img/cover.jpg');
+    background: url('../img/cover-1.svg') no-repeat center fixed;
     background-size: cover;
-    background-position: center;
     height: 50vh;
     display: flex;
     justify-content: center;
@@ -112,24 +121,31 @@ main .cover {
     text-align: center;
 }
 
+main .cover .cover--title {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
 main .cover h1 {
-    color: #000000;
+    color: var(--dark-color);
     font-size: 3rem;
     font-weight: bold;
     text-transform: capitalize;
 }
 
 main .cover h1 span {
-    color: #314ed1;
+    color: var(--primary-color);
 }
 
 main .cover p {
-    color: #ffffff;
+    color: var(--light-color);
     font-size: 1.2rem;
     margin-top: 1rem;
     width: max-content;
     margin: 0 auto;
-    background-color: #314ed1;
+    background-color: var(--primary-color);
     border-radius: 5px;
     padding: 5px 5px;
 }
@@ -145,6 +161,10 @@ main .cover p {
 
     main .cover p {
         font-size: 1rem;
+    }
+
+    main .cover .cover--title {
+        box-shadow: none;
     }
 }
 
@@ -170,7 +190,7 @@ main .content .content--title .col-12 {
 main .content .content--title h1 {
     font-size: 2.3rem;
     font-weight: bold;
-    color: #000000;
+    color: var(--dark-color);
     margin-bottom: 1rem;
 }
 
@@ -194,6 +214,7 @@ main .content .content--search {
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin-bottom: 10rem;
     height: 300px;
     background: url('../img/search.jpg') no-repeat center fixed;
 }
@@ -201,7 +222,19 @@ main .content .content--search {
 main .content .content--search h1 {
     font-size: 2.3rem;
     font-weight: bold;
-    color: #000000;
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+main .content .content--search span {
+    color: var(--primary-color);
+    font-weight: bolder;
+}
+
+main .content .content--search p {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    line-height: 1.5;
     margin-bottom: 1rem;
 }
 
@@ -220,36 +253,217 @@ main .content .content--search .result {
     margin-top: 1rem;
 }
 
-/* main content description */
+main .content .content--search .search--background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
 
+main .content .content--search .bg--element-1 {
+    position: absolute;
+    top: 0;
+    left: 14%;
+    transform: rotate(-15deg);
+    width: 50px;
+}
+
+main .content .content--search .bg--element-2 {
+    position: absolute;
+    bottom: 0;
+    right: 120px;
+    transform: translate(60%, 110%) rotate(155deg);
+    width: 135px;
+}
+
+main .content .content--search .bg--element-3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(100%, 160%) rotate(-120deg);
+    width: 80px;
+}
+
+main .content .content--search .bg--element-4 {
+    position: absolute;
+    top: 0;
+    right: 10%;
+    transform: translate(0, 10%) rotate(125deg);
+    width: 60px;
+}
+
+main .content .content--search .bg--element-5 {
+    position: absolute;
+    top: 50;
+    left: 50;
+    transform: translate(-50%, 20%) rotate(5deg);
+    width: 100px;
+}
+
+@media (max-width: 992px) {
+    main .content .content--search {
+        height: 400px;
+        margin-bottom: 5rem;
+    }
+
+    main .content .content--search h1 {
+        font-size: 2rem;
+    }
+
+    main .content .content--search p {
+        font-size: 1.2rem;
+    }
+
+    main .content .content--search .bg--element-1 {
+        left: 0;
+        transform: translate(100%, 20%) rotate(-15deg);
+        width: 40px;
+    }
+
+    main .content .content--search .bg--element-2 {
+        right: 0;
+        transform: translate(0, 100%) rotate(35deg);
+        width: 100px;
+    }
+
+    main .content .content--search .bg--element-3 {
+        left: 0;
+        transform: translate(50%, 160%) rotate(-120deg);
+        width: 90px;
+    }
+
+    main .content .content--search .bg--element-4 {
+        right: 0;
+        transform: translate(-20%, -20%) rotate(125deg);
+        width: 50px;
+    }
+
+    main .content .content--search .bg--element-5 {
+        top: 50;
+        left: 50;
+        transform: translate(-20%, 20%) rotate(5deg);
+        width: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    main .content .content--search {
+        height: 200px;
+    }
+
+    main .content .content--search h1 {
+        font-size: 1.5rem;
+    }
+
+    main .content .content--search p {
+        font-size: 1rem;
+    }
+
+    main .content .content--search .bg--element-1 {
+        left: 0;
+        transform: translate(20%, -100%) rotate(-15deg);
+        width: 40px;
+    }
+
+    main .content .content--search .bg--element-2 {
+        right: 0;
+        transform: translate(0, 100%) rotate(35deg);
+        width: 100px;
+    }
+
+    main .content .content--search .bg--element-3 {
+        left: 0;
+        transform: translate(50%, 160%) rotate(-120deg);
+        width: 60px;
+    }
+
+    main .content .content--search .bg--element-4 {
+        right: 0;
+        transform: translate(-20%, -20%) rotate(125deg);
+        width: 50px;
+    }
+
+    main .content .content--search .bg--element-5 {
+        top: 50;
+        left: 50;
+        transform: translate(-20%, 20%) rotate(5deg);
+        width: 80px;
+    }
+}
+
+@media (max-width: 576px) {
+    main .content .content--search {
+        height: 350px;
+    }
+
+    main .content .content--search h1 {
+        font-size: 1.5rem;
+    }
+
+    main .content .content--search p {
+        font-size: 1rem;
+    }
+
+    main .content .content--search .bg--element-1 {
+        left: 0;
+        transform: translate(20%, -100%) rotate(-15deg);
+        width: 40px;
+    }
+
+    main .content .content--search .bg--element-2 {
+        right: 0;
+        transform: translate(0, 100%) rotate(35deg);
+        width: 100px;
+    }
+
+    main .content .content--search .bg--element-3 {
+        left: 0;
+        transform: translate(50%, 150%) rotate(-120deg);
+        width: 60px;
+    }
+
+    main .content .content--search .bg--element-4 {
+        right: 0;
+        transform: translate(-20%, -120%) rotate(125deg);
+        width: 50px;
+    }
+
+    main .content .content--search .bg--element-5 {
+        top: 50;
+        left: 50;
+        transform: translate(-60%, 100%) rotate(5deg);
+        width: 60px;
+    }
+}
+
+/* main content description */
 main .content .content--description .title {
     font-size: 2.3rem;
     font-weight: bold;
-    color: #000000;
+    color: var(--dark-color);
     margin-bottom: 1rem;
     text-align: center;
 }
 
 main .content .content--description .subtitle {
     font-size: 1.6rem;
-    color: #555555;
+    color: var(--secondary-color);
     line-height: 1.5;
     text-align: center;
 }
 
 main .content .content--description .subtitle span {
-    color: #314ed1;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
 main .content .content--description .list li {
     font-size: 1.2rem;
-    color: #555555;
+    color: var(--secondary-color);
     line-height: 1.5;
     margin-bottom: 0.5rem;
 }
 
 main .content .content--description .list li span {
-    color: #314ed1;
+    color: var(--primary-color);
     font-weight: bold;
 }
