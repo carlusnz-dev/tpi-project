@@ -20,6 +20,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 3px 125px;
+    background-color: transparent;
 }
 
 .navbar-brand {
@@ -78,7 +79,7 @@ main {
 }
 
 .scrolled {
-    background-color: #fff;
+    background-color: #fff !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 7px 125px;
     transition: all 0.3s ease;
