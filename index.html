@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Periodica Interativa</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+<body>
+
+    <!--navbar-->
+    <header>
+        <nav class="navbar navbar-expand-md fixed-top">
+            <a href="#" class="navbar-brand">
+                <img src="public/img/logo-1.png" alt="logo-brand">
+                <span>T.P.I</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarNav">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/project.html" class="nav-link">Projeto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/element.html" class="nav-link">Elementos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="pages/about.html" class="nav-link">Sobre</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        <div class="container cover">
+            <div class="row">
+                <div class="col-12 cover--title">
+                    <h1>Tabela periódica <span>interativa</span></h1>
+                    <p class="lead">Um projeto que busca visar a educação inclusiva</p>
+                </div>
+            </div>
+        </div>
+        <div class="container content">
+            <div class="row content--title">
+                <div class="col-12 col-md-6">
+                    <h1>Bem-vindo ao <span>T.P.I</span>!</h1>
+                    <p class="lead">
+                        Na nossa jornada pela ciência, exploramos o fascinante mundo dos elementos químicos de uma forma única e sustentável. No MUV apresenta uma Tabela Periódica acessível, educativa e ecológica, onde cada elemento é representado por um cubo inovador. Estamos comprometidos em tornar a química acessível a todos, independentemente das suas necessidades e preferências.
+                    </p>
+                </div>
+                <div class="col-md-6 d-none d-md-block content--img">
+                    <img src="public/img/img-col-1.svg" alt="Tabela Periodica Interativa" class="img-fluid h-100">
+                </div>
+            </div>
+            <div class="row content--search">
+                <div class="col-12">
+                    <h1>Pesquise qualquer elemento</h3>
+                    <p class="lead">
+                        Digite o nome ou o símbolo do elemento que deseja pesquisar e clique no botão de pesquisa.
+                    </p>
+                    <form action="pages/element.html" method="GET">
+                        <div class="input-group input-group-lg">
+                            <input type="text" class="form-control" placeholder="Pesquisar elemento" aria-label="Pesquisar elemento" aria-describedby="button-addon2">
+                            <button class="btn btn-outline-dark" type="submit" id="button-addon2"><i class="bi bi-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row content--description">
+                <div class="col-12 mb-4">
+                    <h1 class="title">Sobre o projeto</h1>
+                    <p class="subtitle">Conheça mais sobre o projeto e <span>seus objetivos!</span></p>
+                </div>
+                <div class="col-12 col-md-6" style="text-align: justify;">
+                    <h3 class="title--topic fw-medium text-black">Os Cubos dos Elementos</h3>
+                    <p class="lead">
+                        Cada elemento da Tabela Periódica é representado por um cubo, que contém informações essenciais sobre o elemento, incluindo:
+                    </p>
+                    <ol class="list">
+                        <li class="list-item">
+                            <p>
+                                <span>Informações básicas:</span>
+                                Nome do elemento, símbolo químico, número atômico e massa atômica.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>Descrição:</span>
+                                Uma breve descrição do elemento, sua história, aplicações e importância na ciência e na vida cotidiana.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>Comunicação em Libras:</span>
+                                Acreditamos na inclusão de todos, por isso, incluímos um guia em Libras (Língua Brasileira de Sinais) e Braille para que você possa aprender a comunicar o nome do elemento de forma acessível.
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <span>QR Code e Busca para mais informações:</span>
+                                Cada cubo também contém um QR Code exclusivo que o levará a uma página dedicada no nosso site, onde você encontrará informações adicionais, experimentos relacionados ao elemento e recursos educativos.
+                            </p>
+                        </li>
+                    </ol>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="public/img/cubes.png" alt="Cubos dos Elementos" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

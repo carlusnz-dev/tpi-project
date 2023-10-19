@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+main {
+    margin-top: 4rem;
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 125px;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #000000;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover span {
+    color: #6b6b6b;
+}
+
+.navbar-brand img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.nav-link {
+    color: #555555;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #000000;
+    transition: width 0.3s;
+}
+
+.nav-link:hover {
+    color: #000000;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #000000;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+.scrolled {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 7px 125px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 7px 20px;
+    }
+
+    main {
+        margin-top: 3rem;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
+
+/* main title */
+
+main .cover {
+    background-image: url('../img/cover.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main .cover h1 {
+    color: #000000;
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+main .cover h1 span {
+    color: #314ed1;
+}
+
+main .cover p {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    width: max-content;
+    margin: 0 auto;
+    background-color: #314ed1;
+    border-radius: 5px;
+    padding: 5px 5px;
+}
+
+@media (max-width: 768px) {
+    main .cover {
+        height: 40vh;
+    }
+
+    main .cover h1 {
+        font-size: 2rem;
+    }
+
+    main .cover p {
+        font-size: 1rem;
+    }
+}
+
+/* main content */
+
+main .content {
+    padding: 0 125px;
+}
+
+main .content--title, .content--search, .content--description {
+    margin: 4rem 0;
+}
+
+/* main content title */
+
+main .content .content--title .col-12 {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+main .content .content--title h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+main .content .content--img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+    main .content {
+        padding: 0 20px;
+    }
+}
+
+/* main content search */
+
+main .content .content--search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 300px;
+    background: url('../img/search.jpg') no-repeat center fixed;
+}
+
+main .content .content--search h1 {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+main .content .content--search form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main .content .content--search .result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* main content description */
+
+main .content .content--description .title {
+    font-size: 2.3rem;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+main .content .content--description .subtitle {
+    font-size: 1.6rem;
+    color: #555555;
+    line-height: 1.5;
+    text-align: center;
+}
+
+main .content .content--description .subtitle span {
+    color: #314ed1;
+    font-weight: bold;
+}
+
+main .content .content--description .list li {
+    font-size: 1.2rem;
+    color: #555555;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+main .content .content--description .list li span {
+    color: #314ed1;
+    font-weight: bold;
+}
