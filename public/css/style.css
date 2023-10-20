@@ -1,3 +1,10 @@
+:root {
+    --primary-color: #314ed1;
+    --secondary-color: #6b6b6b;
+    --light-color: #f4f4f4;
+    --dark-color: #111111;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,12 +15,6 @@ body {
     min-width: 372px;
 }
 
-:root {
-    --primary-color: #314ed1;
-    --secondary-color: #6b6b6b;
-    --light-color: #f4f4f4;
-    --dark-color: #111111;
-}
 
 header {
     padding: 20px 0;
@@ -123,9 +124,9 @@ main .cover {
 
 main .cover .cover--title {
     background-color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 main .cover h1 {
@@ -466,4 +467,108 @@ main .content .content--description .list li {
 main .content .content--description .list li span {
     color: var(--primary-color);
     font-weight: bold;
+}
+
+/* footer */
+
+footer {
+    background-color: var(--dark-color);
+    padding: 3rem 0;
+}
+
+footer .footer--title {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+footer .footer--subtitle {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+footer .footer--social {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+footer .footer--social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    color: var(--light-color);
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+footer .footer--social a:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+footer .footer--social a i {
+    font-size: 1.2rem;
+}
+
+footer .footer--lead {
+    color: var(--light-color);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+
+footer .list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+footer .list li {
+    margin-right: 1rem;
+    color: var(--light-color);
+}
+
+footer .footer--linkcontact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.btn-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: none;
+    color: var(--light-color);
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    margin: 0 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-switch:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+.btn-switch i {
+    font-size: 1.2rem;
+}
+
+/* dark mode */
+
+.dark-mode {
+    background-color: var(--dark-color);
+    color: var(--light-color);
 }
