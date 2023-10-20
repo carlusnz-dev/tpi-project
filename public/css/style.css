@@ -543,6 +543,24 @@ footer .footer--linkcontact {
     margin-top: 1rem;
 }
 
+@media (max-width: 768px) {
+    footer {
+        
+    }
+
+    footer .footer--title {
+        font-size: 1.2rem;
+    }
+
+    footer .footer--subtitle {
+        font-size: 1rem;
+    }
+
+    footer .footer--lead {
+        font-size: 0.8rem;
+    }
+}
+
 .btn-switch {
     display: flex;
     justify-content: center;
