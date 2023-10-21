@@ -20,6 +20,10 @@ main {
 
 main .project--cover {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 50vh;
     background: url(../img/cover-2.svg) no-repeat center center;
     background-size: cover;
@@ -28,17 +32,124 @@ main .project--cover {
 
 main .project--cover .title {
     font-size: 4rem;
+    margin-bottom: 10px;
     color: var(--dark-color);
+    font-weight: bold;
     text-align: center;
 }
 
 main .project--cover .subtitle {
     width: fit-content;
     margin-inline: auto;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: var(--light-color);
     background-color: var(--primary-color);
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    main .project--cover {
+        height: 40vh;
+    }
+
+    main .project--cover .title {
+        font-size: 2.5rem;
+    }
+
+    main .project--cover .subtitle {
+        font-size: 1rem;
+        border-radius: 100px;
+    }
+}
+
+/* content */
+main .project--content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+main .project--content .row {
+    margin: 4rem 0;
+}
+
+main .project--content .project--title {
+    font-size: 2.3rem;
+    color: var(--dark-color);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main .project--content .project--lead {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+main .project--content .gallery--pc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+main .project--content .gallery--pc .gallery--item {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+main .project--content .gallery--pc .gallery--item img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main .project--content .gallery--pc .gallery--item:hover {
+    transform: scale(1.02);
+}
+
+/* logbook */
+main .logbook {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+main .logbook .logbook--item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+main .logbook .logbook--item .logbook--title {
+    font-size: 1.5rem;
+    color: var(--dark-color);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main .logbook .logbook--item .logbook--lead {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+main .logbook .logbook--item .logbook--img {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }

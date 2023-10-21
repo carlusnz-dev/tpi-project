@@ -1,6 +1,6 @@
 :root {
     --primary-color: #314ed1;
-    --secondary-color: #6b6b6b;
+    --secondary-color: #505050;
     --light-color: #f4f4f4;
     --dark-color: #111111;
 }
@@ -92,7 +92,6 @@ main {
 .scrolled {
     background-color: #fff !important;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 7px 125px;
     transition: all 0.3s ease;
 }
 
@@ -157,7 +156,7 @@ main .cover p {
     }
 
     main .cover h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     main .cover p {

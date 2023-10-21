@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabela Periódica Interativa - Projeto</title>
+    <title>Tabela Periódica - Projeto</title>
     <link rel="apple-touch-icon" sizes="180x180" href="../public/img/favicon_io/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../public/img/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../public/img/favicon_io/favicon-16x16.png">
@@ -14,13 +15,14 @@
     <link rel="stylesheet" href="../public/css/style.css">
     <link rel="stylesheet" href="../public/css/project.css">
 </head>
+
 <body>
     <!--navbar-->
     <header>
         <nav class="navbar navbar-expand-md fixed-top">
             <a href="#" class="navbar-brand">
                 <img src="../public/img/logo-brand.png" alt="logo-brand">
-                <span>T.P.I</span>
+                <span>TPIIS</span>
             </a>
             <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav"
                 aria-controls="navbarNav">
@@ -54,23 +56,144 @@
 
     <!--main-->
     <main>
-        <div class="container">
+        <div class="container project--cover mb-5">
             <div class="row">
                 <div class="col-12 project--cover">
-                    <h1 class="title">Projeto T.P.I</h1>
-                    <p class="subtitle">Veja como foi a construção de todo o projeto do T.P.I</p>
+                    <h1 class="title">Projeto TPIIS</h1>
+                    <p class="subtitle">Nosso diário de bordo</p>
                 </div>
             </div>
+        </div>
+        <div class="container project--content">
             <div class="row">
                 <div class="col-12">
-                    <h2 class="project--subtitle">O que é o T.P.I?</h2>
+                    <h2 class="project--title">O que é o TPIIS?</h2>
                     <p class="project--lead">O T.P.I é um projeto que visa a educação inclusiva, com o objetivo de
                         facilitar o aprendizado de pessoas com deficiência visual, auditiva e cognitiva. O projeto
                         consiste em uma tabela periódica interativa, onde o usuário pode interagir com os elementos
                         químicos, podendo ouvir a pronúncia do nome do elemento, ver a sua localização na tabela
-                        periódica, ver a sua classificação, ver a sua massa atômica, ver a sua eletronegatividade e
-                        ver a sua distribuição eletrônica.
+                        periódica, a sua classificação, a sua massa atômica, a sua eletronegatividade e
+                        a sua distribuição eletrônica.
                     </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="project--lead">
+                        O objetivo do trabalho é auxiliar os alunos no rendimento escolar com a facilitação da
+                        aprendizagem através da tabela interativa, além de colocar em prática a lei no 13.005 de 2014
+                        que visa universalizar o ensino para crianças entre 4 e 17 anos que apresentam algum tipo de
+                        dificuldade motora ou mental até o ano de 2024.
+                        <br>
+                        A Tabela foi construída através da reutilização de caixas de papelão, transformando-as em 118
+                        cubos, cada um representando um elemento encontrado na tabela periódica. Os cubos foram
+                        revestidos com folhas de papel coloridas, contendo informações químicas, curiosidades, sigla,
+                        linguagem em Braille e LIBRAS dos respectivos elementos químicos.
+                        <br>
+                        Como parte do projeto, neste site podem ser encontradas informações sobre os 118 elementos
+                        químicos da tabela periódica, além de links para audiobooks que visam auxiliar a compreensão de
+                        deficientes visuais sobre o conteúdo. O objetivo do site é expandir o projeto com o auxílio da
+                        tecnologia, pois acreditamos que, com ele, alcançaremos um número maior de estudantes que
+                        poderão fazer uso do recurso didático sem deixar suas casas.
+                    </p>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <div class="element--group"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="project--title">Algumas fotos</h1>
+                </div>
+                <div class="col-12 gallery--pc d-none d-md-grid">
+                    <img src="https://unsplash.it/1000/1000" alt="photo-1" class="gallery--item img-fluid">
+                    <img src="https://unsplash.it/1000/1000" alt="photo-2" class="gallery--item img-fluid">
+                    <img src="https://unsplash.it/1000/1000" alt="photo-3" class="gallery--item img-fluid">
+                </div>
+                <div class="col-12 gallery--mobile d-block d-md-none">
+                    <div class="carousel slide" id="carouselExampleIndicators" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                                class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../public/img/photo-1.jpg" alt="photo-1" class="img-fluid photo--1">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../public/img/photo-2.jpg" alt="photo-2" class="img-fluid photo--2">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../public/img/photo-3.jpg" alt="photo-3" class="img-fluid photo--3">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                                    class="bi bi-chevron-left"></i></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"><i
+                                    class="bi bi-chevron-right"></i></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="project--title">Processo de construção</h1>
+                </div>
+                <div class="logbook">
+                    <div class="logbook--item">
+                        <div class="logbook--text">
+                            <h1 class="logbook--title">Lorem, ipsum.</h1>
+                            <p class="logbook--lead">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem veritatis assumenda animi officiis in suscipit, explicabo officia molestias eaque! Tempore aut labore ab consequuntur maiores. Placeat ipsam quas dolores.
+                            </p>
+                        </div>
+                        <div class="logbook--img"></div>
+                    </div>
+                    <div class="logbook--item">
+                        <div class="logbook--img"></div>
+                        <div class="logbook--item--text">
+                            <h1 class="logbook--title">Lorem, ipsum.</h1>
+                            <p class="logbook--lead">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem veritatis assumenda animi officiis in suscipit, explicabo officia molestias eaque! Tempore aut labore ab consequuntur maiores. Placeat ipsam quas dolores.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="logbook--item">
+                        <div class="logbook--item--text">
+                            <h1 class="logbook--title">Lorem, ipsum.</h1>
+                            <p class="logbook--lead">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem veritatis assumenda animi officiis in suscipit, explicabo officia molestias eaque! Tempore aut labore ab consequuntur maiores. Placeat ipsam quas dolores.
+                            </p>
+                        </div>
+                        <div class="logbook--img"></div>
+                    </div>
+                    <div class="logbook--item">
+                        <div class="logbook--img"></div>
+                        <div class="logbook--item--text">
+                            <h1 class="logbook--title">Lorem, ipsum.</h1>
+                            <p class="logbook--lead">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem veritatis assumenda animi officiis in suscipit, explicabo officia molestias eaque! Tempore aut labore ab consequuntur maiores. Placeat ipsam quas dolores.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="logbook--item">
+                        <div class="logbook--item--text">
+                            <h1 class="logbook--title">Lorem, ipsum.</h1>
+                            <p class="logbook--lead">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur autem veritatis assumenda animi officiis in suscipit, explicabo officia molestias eaque! Tempore aut labore ab consequuntur maiores. Placeat ipsam quas dolores.
+                            </p>
+                        </div>
+                        <div class="logbook--img"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,26 +206,28 @@
                 <div class="col-6 col-md-4">
                     <h1 class="footer--title">Tabela Periódica</h1>
                     <h4 class="footer--subtitle">Interativa, Inclusiva, Sustentável e Tecnológica</h3>
-                    <p class="footer--lead">T.P.I</p>
-                    <p class="footer--lead">Um projeto que busca visar a educação inclusiva</p>
-                    <!--btn switch dark mode-->
-                    <button type="button" class="btn-switch btn disabled">
-                        <i class="bi bi-sun"></i>
-                        <i class="bi bi-moon d-none"></i>
-                    </button>
+                        <p class="footer--lead">&copy; Todos os direitos reservados à carlusnz-dev</p>
+                        <!--btn switch dark mode-->
+                        <button type="button" class="btn-switch btn disabled">
+                            <i class="bi bi-sun"></i>
+                            <i class="bi bi-moon d-none"></i>
+                        </button>
                 </div>
                 <div class="col-6 col-md-4">
                     <h3 class="footer--title">Contato</h1>
-                    <p class="footer--lead">Email: <a href="mailto:carlosantunes@gmail.com" class="footer--linkcontact">carlosantunes.dev@gmail.com</a></p>
-                    <p class="footer--lead">Celular: <a href="tel:+5574999889518" class="footer--linkcontact">(74) 999 88 9518</a></p>
-                    <div class="footer--social">
-                        <!--Instagram, Linkedin e WhatsApp-->
-                        <a href="https://www.instagram.com/carlosantunes.dev/" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/carlos-antunes-4a1b3b1b2/" target="_blank"><i
-                        class="bi bi-linkedin"></i></a>
-                        <a href="https://api.whatsapp.com/send?phone=5511946810556" target="_blank"><i
-                        class="bi bi-whatsapp"></i></a>
-                    </div>
+                        <p class="footer--lead">Email: <a href="mailto:carlosantunes@gmail.com"
+                                class="footer--linkcontact">carlosantunes.dev@gmail.com</a></p>
+                        <p class="footer--lead">Celular: <a href="tel:+5574999889518" class="footer--linkcontact">(74)
+                                999 88 9518</a></p>
+                        <div class="footer--social">
+                            <!--Instagram, Linkedin e WhatsApp-->
+                            <a href="https://www.instagram.com/carlosantunes.dev/" target="_blank"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/carlos-antunes-4a1b3b1b2/" target="_blank"><i
+                                    class="bi bi-linkedin"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=5511946810556" target="_blank"><i
+                                    class="bi bi-whatsapp"></i></a>
+                        </div>
                 </div>
                 <div class="col-md-4 d-none d-md-block">
                     <h3 class="footer--title">Integrantes</h3>
@@ -126,4 +251,5 @@
         crossorigin="anonymous"></script>
     <script src="../public/js/script.js"></script>
 </body>
+
 </html>
