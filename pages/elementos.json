@@ -1,0 +1,18 @@
+{
+  "elementos": [
+    {
+      "atomicNumber": 1,
+      "name": "Hidrogênio",
+      "symbol": "H",
+      "atomicMass": 1.008,
+      "radioactivity": "Não Radioativo"
+    },
+    {
+      "atomicNumber": 2,
+      "name": "Hélio",
+      "symbol": "He",
+      "atomicMass": 4.0026,
+      "radioactivity": "Não Radioativo"
+    }
+  ]
+}
