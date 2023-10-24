@@ -1,7 +1,7 @@
 // Função para buscar o elemento da URL
 function getElementFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    const elementAtomicNumber = urlParams.get("numeroAtomico");
+    const elementAtomicNumber = urlParams.get("atomicNumber");
     return elementAtomicNumber ? decodeURIComponent(elementAtomicNumber) : null;
 }
 

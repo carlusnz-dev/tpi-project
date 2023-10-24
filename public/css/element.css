@@ -41,3 +41,21 @@
     font-weight: 500;
     color: var(--dark-color);
 }
+
+@media (max-width: 768px) {
+    .element--cover {
+        height: 40vh;
+    }
+
+    .element--cover .cover--title h1 {
+        font-size: 2.5rem;
+    }
+
+    .element--content .element--info p {
+        font-size: 1rem;
+    }
+
+    .element--content {
+        padding-inline: 2rem;
+    }
+}
