@@ -34,3 +34,4 @@ btnSwitch.addEventListener("click", () => {
     btnSwitchMoon.classList.toggle("d-none");
     document.body.classList.toggle("dark-mode");
 })
+
