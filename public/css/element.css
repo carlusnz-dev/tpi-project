@@ -1,0 +1,43 @@
+.element--cover {
+    background-image: url(../img/cover-1.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element--cover .cover--title {
+    background-color: var(--light-color);
+    padding: 1rem 2.5rem;
+    width: fit-content;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.element--cover .cover--title h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.element--content {
+    padding: 2rem 0;
+    margin: 2rem auto;
+}
+
+.element--content .element--info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.element--content .element--info p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dark-color);
+}
