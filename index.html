@@ -42,7 +42,7 @@
                             <a href="pages/project.html" class="nav-link">Projeto</a>
                         </li>
                         <li class="nav-item">
-                            <a href="pages/element.html" class="nav-link">Elementos</a>
+                            <a href="pages/element.html" class="nav-link disabled">Elementos</a>
                         </li>
                         <li class="nav-item">
                             <a href="pages/about.html" class="nav-link">Sobre</a>
@@ -81,6 +81,8 @@
                         <h1>Pesquise qualquer <span>elemento</span></h1>
                         <p class="lead">
                             Digite o nome ou o símbolo do elemento que deseja pesquisar e clique no botão de pesquisa.
+                            <br>
+                            <span class="message">Desativado temporariamente.</span>
                         </p>
                         <span class="bg--element-1"><img src="public/img/5.svg" alt="element" class="img-fluid"></span>
                         <span
@@ -92,9 +94,9 @@
                     </div>
                     <form action="pages/element.html" method="GET" class="search-form">
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Pesquisar elemento"
+                            <input type="text" class="form-control disabled" placeholder="Pesquisar elemento"
                             aria-label="Pesquisar elemento" aria-describedby="button-addon2" name="query">
-                            <button class="btn btn-dark btn-search" type="submit" id="button-addon2"><i class="bi bi-search"></i>
+                            <button class="btn btn-dark btn-search disabled" type="submit" id="button-addon2"><i class="bi bi-search"></i>
                             </button>
                         </div>
                     </form>
@@ -156,7 +158,7 @@
                             <div id="flush-collapseOne" class="accordion-collapse collapse"
                                 aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                 <div class="accordion-body">
-                                    Nome do elemento, símbolo químico, número atômico e massa atômica.
+                                    Nome do elemento, símbolo químico, número atômico e massa atômica. Além de tantas outras informações.
                                 </div>
                             </div>
                         </div>
@@ -181,7 +183,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#flush-collapseThree" aria-expanded="false"
                                     aria-controls="flush-collapseThree">
-                                    Comunicação em Libras
+                                    Comunicação em Libras e Braille
                                 </button>
                             </h2>
                             <div id="flush-collapseThree" class="accordion-collapse collapse"
@@ -212,7 +214,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 d-none d-md-block">
+                <div class="col-md-6 d-none d-md-block content--img">
                     <img src="public/img/col-1.svg" alt="col-1" class="img-fluid">
                 </div>
             </div>

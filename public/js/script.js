@@ -36,17 +36,6 @@ btnSwitch.addEventListener("click", () => {
 })
 
 document.addEventListener("DOMContentLoaded", () => {
-    // Formulário de pesquisa
-    const searchForm = document.querySelector(".search-form");
-    searchForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const queryInput = searchForm.querySelector("input[name='query']");
-        const query = queryInput.value;
-        window.location.href = `element.html?atomicNumber=${query}`;
-    });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
     const searchForm = document.querySelector(".search-form");
     const queryInput = document.getElementById("form-control");
 

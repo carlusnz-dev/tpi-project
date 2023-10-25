@@ -1,0 +1,19 @@
+main {
+    padding: 0 2rem;
+    height: 50vh;
+}
+
+main h1 {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+main p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    text-align: center;
+}
