@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Element Search</title>
+     <style>
+          .suggestion-item {
+               cursor: pointer;
+               padding: 5px;
+          }
+
+          .suggestion-item:hover {
+               background-color: #f0f0f0;
+          }
+     </style>
+     <script>
+          document.addEventListener('DOMContentLoaded', function () {
+               let query = '';
+               let suggestions = [];
+               let elementos = {};
+
+               const queryInput = document.getElementById('query-input');
+               const suggestionsList = document.getElementById('suggestions-list');
+
+               const handleInputChange = (e) => {
+                    query = e.target.value.trim().toLowerCase();
+                    updateSuggestions();
+               };
+
+               const handleSearchSubmit = (e) => {
+                    e.preventDefault();
+                    if (Object.keys(elementos).length > 0) {
+                         const element = Object.values(elementos).find(el =>
+                              (el.nome && el.nome.toLowerCase() === query) ||
+                              (el.simbolo && el.simbolo.toLowerCase() === query)
+                         );
+
+                         if (element) {
+                              redirectToElementPage(element.informacoes.numeroAtomico);
+                              queryInput.value = "";
+                              query = "";
+                         } else {
+                              alert("Elemento não encontrado!");
+                         }
+                    } else {
+                         alert("Dados dos elementos ainda não carregados.");
+                    }
+               };
+
+               const updateSuggestions = () => {
+                    if (query && elementos) {
+                         suggestions = Object.values(elementos)
+                              .filter(el =>
+                                   (el.nome && el.nome.toLowerCase().includes(query)) ||
+                                   (el.informacoes.Sigla && el.informacoes.Sigla.toLowerCase().includes(query))
+                              )
+                              .slice(0, 5);
+                         renderSuggestions();
+                    } else {
+                         suggestions = [];
+                         renderSuggestions();
+                    }
+               };
+
+               const renderSuggestions = () => {
+                    suggestionsList.innerHTML = '';
+                    suggestions.forEach(suggestion => {
+                         const li = document.createElement('li');
+                         li.textContent = `${suggestion.nome} (${suggestion.informacoes.Sigla})`;
+                         li.className = 'suggestion-item';
+                         li.addEventListener('click', () => redirectToElementPage(suggestion.informacoes.numeroAtomico));
+                         suggestionsList.appendChild(li);
+                    });
+               };
+
+               const redirectToElementPage = (atomicNumber) => {
+                    window.location.href = `/element.html?atomicNumber=${atomicNumber}`;
+               };
+
+               fetch("../content.json")
+                    .then(response => response.json())
+                    .then(data => {
+                         elementos = data.elementos;
+                    })
+                    .catch(error => {
+                         console.error("Erro ao buscar os dados dos elementos:", error);
+                    });
+
+               queryInput.addEventListener('input', handleInputChange);
+               document.getElementById('search-form').addEventListener('submit', handleSearchSubmit);
+          });
+     </script>
+</head>
+
+<body>
+     <form id="search-form">
+          <input type="text" id="query-input" placeholder="Digite o nome ou símbolo do elemento">
+          <button type="submit">Buscar</button>
+     </form>
+     <ul id="suggestions-list"></ul>
+</body>
+
+</html>

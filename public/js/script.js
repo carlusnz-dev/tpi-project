@@ -1,70 +1,93 @@
-// navbar scrolled
 document.addEventListener("DOMContentLoaded", () => {
     const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-})
+    const queryInput = document.getElementById("query-input");
+    const suggestionsList = document.getElementById("suggestions-list");
+    const searchForm = document.getElementById("search-form");
 
-document.addEventListener("scroll", () => {
-    const navbar = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-        navbar.classList.add("scrolled");
-    } else {
-        navbar.classList.remove("scrolled");
-    }
-})
+    let elementos = {}; // Carregar os dados dos elementos
 
-// nav-link active current page 
-const navLinks = document.querySelectorAll(".nav-link");
-navLinks.forEach(link => {
-    if (link.href === window.location.href) {
-        link.classList.add("active");
-    }
-})
+    fetch("./content.json")
+        .then(response => response.json())
+        .then(data => {
+            elementos = data.elementos;
+            console.log("Elementos carregados com sucesso:", elementos);
+        })
+        .catch(error => console.error("Erro ao buscar os dados dos elementos:", error));
 
-// mudar para o modo escuro e claro bootstrap 5
-const btnSwitch = document.querySelector(".btn-switch");
-const btnSwitchSun = document.querySelector(".bi-sun");
-const btnSwitchMoon = document.querySelector(".bi-moon");
-btnSwitch.addEventListener("click", () => {
-    btnSwitchSun.classList.toggle("d-none");
-    btnSwitchMoon.classList.toggle("d-none");
-    document.body.classList.toggle("dark-mode");
-})
-
-document.addEventListener("DOMContentLoaded", () => {
-    const searchForm = document.querySelector(".search-form");
-    const queryInput = document.getElementById("form-control");
-
-    searchForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        const query = queryInput.value;
-
-        // Aqui você pode verificar se a consulta é um número ou um nome
-        // Se for um número, redirecione diretamente para element.html?numeroAtomico=x
-        if (!isNaN(query)) {
-            const atomicNumber = parseInt(query, 10);
-            window.location.href = `element.html?atomicNumber=${atomicNumber}`;
+    // Navbar scroll effect
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
         } else {
-            // Se for um nome, você precisará buscar o JSON para obter a correspondência do nome
-            fetch("content.json")
-                .then((response) => response.json())
-                .then((data) => {
-                    const elementos = data.elementos;
-                    const elemento = elementos[query];
+            navbar.classList.remove("scrolled");
+        }
+    };
 
-                    if (elemento) {
-                        window.location.href = `element.html?atomicNumber=${elemento.numeroAtomico}`;
-                    } else {
-                        console.log("Elemento não encontrado.");
-                    }
-                })
-                .catch((error) => {
-                    console.error("Erro ao buscar os dados dos elementos:", error);
-                });
+    document.addEventListener("scroll", handleScroll);
+    handleScroll();
+
+    // Nav-link active current page
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach(link => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
         }
     });
+
+    // Dark and light mode toggle
+    const btnSwitch = document.querySelector(".btn-switch");
+    const btnSwitchSun = document.querySelector(".bi-sun");
+    const btnSwitchMoon = document.querySelector(".bi-moon");
+
+    btnSwitch.addEventListener("click", () => {
+        btnSwitchSun.classList.toggle("d-none");
+        btnSwitchMoon.classList.toggle("d-none");
+        document.body.classList.toggle("dark-mode");
+    });
+
+    // Search form submission
+    searchForm.addEventListener("submit", event => {
+        event.preventDefault();
+        const query = queryInput.value.trim().toLowerCase();
+        const element = Object.values(elementos).find(el => el.nome.toLowerCase() === query || el.informacoes.Sigla.toLowerCase() === query);
+
+        if (element) {
+            window.location.href = `pages/element.html?atomicNumber=${element.informacoes.numeroAtomico}`;
+        } else {
+            alert("Elemento não encontrado!");
+        }
+    });
+
+    const handleInputChange = (e) => {
+        const query = e.target.value.trim().toLowerCase();
+        updateSuggestions(query);
+    };
+
+    const updateSuggestions = (query) => {
+        let suggestions = [];
+        if (query && elementos) {
+            suggestions = Object.values(elementos)
+                .filter(el =>
+                    (el.nome && el.nome.toLowerCase().includes(query)) ||
+                    (el.informacoes.Sigla && el.informacoes.Sigla.toLowerCase().includes(query))
+                )
+                .slice(0, 5);
+        }
+        renderSuggestions(suggestions);
+    };
+
+    const renderSuggestions = (suggestions) => {
+        suggestionsList.innerHTML = '';
+        suggestions.forEach(suggestion => {
+            const li = document.createElement('li');
+            li.textContent = `${suggestion.nome} (${suggestion.informacoes.Sigla})`;
+            li.className = 'suggestion-item';
+            li.addEventListener('click', () => {
+                window.location.href = `pages/element.html?atomicNumber=${suggestion.informacoes.numeroAtomico}`;
+            });
+            suggestionsList.appendChild(li);
+        });
+    };
+
+    queryInput.addEventListener('input', handleInputChange);
 });

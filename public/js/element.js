@@ -2,7 +2,7 @@
 function getElementFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     const elementAtomicNumber = urlParams.get("atomicNumber");
-    return elementAtomicNumber ? decodeURIComponent(elementAtomicNumber) : null;
+    return elementAtomicNumber ? decodeURIComponent(elementAtomicNumber).replace(";", "") : null;
 }
 
 // Função para exibir as informações do elemento

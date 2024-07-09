@@ -564,7 +564,7 @@ footer .footer--linkcontact {
 
 @media (max-width: 768px) {
     footer {
-        
+        padding: 2rem 0;
     }
 
     footer .footer--title {
@@ -608,4 +608,44 @@ footer .footer--linkcontact {
 .dark-mode {
     background-color: var(--dark-color);
     color: var(--light-color);
+}
+
+#suggestions {
+    max-height: 200px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 0 0 5px 5px;
+}
+
+.list-group-item {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* suggestions list */
+#suggestions-list {
+    z-index: 1000;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: none;
+}
+
+#suggestions-list li {
+    list-style: none;
+    border-bottom: 2px solid #f0f0f0;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+#suggestions-list li:hover {
+    background-color: #f0f0f0;
 }
