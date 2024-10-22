@@ -1,5 +1,46 @@
 {
     "elementos": {
+        "1": {
+            "nome": "Hidrogênio",
+            "descricao": "O hidrogênio é o elemento mais abundante no universo, sendo o primeiro elemento da tabela periódica. É um gás incolor, inodoro, insípido e altamente inflamável. É o elemento mais leve e mais simples da tabela periódica, sendo o mais abundante no universo. É o elemento mais abundante no universo, sendo o primeiro elemento da tabela periódica. É um gás incolor, inodoro, insípido e altamente inflamável. É o elemento mais leve e mais simples da tabela periódica, sendo o mais abundante no universo.",
+            "informacoes": {
+                "Sigla": "H;",
+                "numeroAtomico": "1;",
+                "massaAtomica": "1,008;",
+                "densidade": "0,09 g/cm3;",
+                "eletronegatividade": "2,2;",
+                "pontoFusao": "-259,14 °C;",
+                "pontoEbulicao": "-252,87 °C;",
+                "primeiraEnergiaIonizacao": "1312 kJ/mol;",
+                "raioAtomico": "53 pm;",
+                "configuracaoEletronica": "1s¹;",
+                "radiotividade": "Não radioativo"
+            },
+            "aplicacoes": [
+                "Na produção de amônia;",
+                "Na produção de metanol;",
+                "Na produção de hidrocarbonetos;",
+                "Na produção de hidrogênio metálico;",
+                "Na produção de hidrogênio líquido;",
+                "Na produção de hidrogênio sólido;",
+                "Na produção de hidrogênio gasoso;",
+                "Na produção de hidrogênio ionizado;",
+                "Na produção de hidrogênio molecular;",
+                "Na produção de hidrogênio atômico;",
+                "Na produção de hidrogênio molecular ionizado;",
+                "Na produção de hidrogênio molecular ionizado negativamente;",
+                "Na produção de hidrogênio molecular ionizado positivamente;"
+            ],
+            "curiosidades": [
+                "Foi descoberto por Henry Cavendish em 1766, na Inglaterra;",
+                "Quanto do elemento hidrogênio existe no…",
+                "– Corpo humano: 10% da massa;",
+                "– Universo: 75% da massa;",
+                "– Crosta terrestre: 0,15% da massa.",
+                "Onde podemos encontrar o hidrogênio?",
+                "– Na água (H2O);"
+            ]
+        },
         "3": {
             "nome": "Lítio",
             "descricao": "O lítio é um elemento pertencente a família 1A (Metais Alcalinos), sendo o metal mais leve e menos denso entre os elementos sólidos. Este elemento é um ótimo condutor de energia térmica e de eletricidade; sofre corrosão facilmente; possui elevada reatividade; e tem uma vasta lista de utilidades: desde aplicações militares, até a purificação do ar.",
